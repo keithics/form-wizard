@@ -1,46 +1,97 @@
-# Getting Started with Create React App
+# Form Wizard Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> Simple but robust and fully tested React Application. Complete with unit testing as well as E2E.
 
-## Available Scripts
+# Requirements
+1. Nodejs 16.x and later (but this should work with older versions as well)
+2. React 16.x
+3. VSCode or Webstorm
 
-In the project directory, you can run:
+## Development NPM commands
 
-### `npm start`
+| Command          | Description                                                        |
+|------------------|--------------------------------------------------------------------|
+| `npm start`      | Development mode                                                   |
+| `npm run lint`   | Checks linting and formatting issues in `./src`                    |
+| `npm run pretty` | Fixes formatting of any ts files inside  `./src`                   |
+| `npm run jest`   | Runs all unit and integrations tests eg: `./src/api/**/**.test.ts` |
+| `npm run test`   | Runs E2E tests                                                     |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Project Structure
+The most obvious difference in a TypeScript + Node project is the folder structure.
+TypeScript (`.ts`) files live in your `src` folder and after compilation are output as JavaScript (`.js`) in the `build` folder.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The full folder structure of this app is explained below:
 
-### `npm run build`
+| Name                                    | Description                                                                                                |
+|-----------------------------------------|------------------------------------------------------------------------------------------------------------|
+| `.eslintignore`                         | Ignore list for eslint during linting process                                                              |
+| `.eslintrc`                             | Config settings for ESLint code style checking                                                             |
+| `.prettierrc`                           | Prettier config                                                                                            |
+| `build`                                 | Contains the distributable (or output) from your TypeScript build. This is the code you ship               |
+| `jest.config `                          | Jest config                                                                                                |
+| `LICENSE`                               | License file                                                                                               |
+| `node_modules**`                        | Contains all your npm dependencies                                                                         |
+| `src**`                                 | Contains your source code that will be compiled to the dist dir                                            |
+| `src/components** `                     | Common React Components                                                                                    |
+| `src/components/containers/**.tsx `     | Common React Components Containers such as Cards, Nav or Main Container                                    |
+| `src/components/forms/**.tsx `          | Common React form components                                                                               |
+| `src/components/forms/**.interface.ts ` | Common React form components interface                                                                     |
+| `src/components/insurance/**.tsx `      | All React components that is specific to `insurance module`                                                |
+| `src/data/**.ts`                        | All hard coded data, Demo purposes only                                                                    |
+| `src/lib/**.helper.ts`                  | Helper functions                                                                                           |
+| `src/lib/insurance.helper.ts`           | Helper functions specific to `insurance module`                                                            |
+| `src/lib/__snapshots__/**`              | Jest Snapshots                                                                                             |
+| `src/pages/**.tsx`                      | React page components                                                                                      |
+| `src/index.tsx`                         | React main entry point                                                                                     |                                                                                     |
+| `src/index.css`                         | React main CSS file                                                                                        |                                                                                     |
+| `src/rotuer.tsx`                        | React router main file                                                                                     |                                                                                     |
+| `jest.config.js`                        | Used to configure Jest running tests written in TypeScript                                                 |
+| `package.json `                         | File that contains npm dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped) |
+| `tsconfig.json `                        | Config settings for compiling server code written in TypeScript                                            |
+| `tailwind.config.json `                 | Config settings for Tailwind                                                                               |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Dependencies
+Dependencies are managed through `package.json`.
+In that file you'll find two sections:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## `dependencies`
 
-### `npm run eject`
+| Package          | Description                                                  |
+|------------------|--------------------------------------------------------------|
+| react            | React Library                                                |
+| react-dom        | React Library for DOM                                        |
+| react-hook-form  | React Hooks for forms                                        |
+| react-router-dom | React router for web                                         |
+| react-scripts    | React scripts                                                |
+| web-vitals       | Shows how your pages perform, based on real world usage data |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## `devDependencies`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Package               | Description                                                             |
+|-----------------------|-------------------------------------------------------------------------|
+| @types/*              | Dependencies in this folder are `.d.ts` files used to provide types     |
+| @typescript-eslint/*  | Eslinst TS plugins                                                      |
+| babel-eslint          | Babel TS plugins                                                        |
+| @tailwindcss/*        | Taiwind CSS Library                                                     |
+| autoprefixer          | Required for Tailwind/React                                             |
+| cypress               | E2E Library                                                             |
+| eslint                | Linter for JavaScript and TypeScript files                              |                                                     |
+| eslint-config/*       | Eslint config                                                           |
+| eslint-plugin*        | Eslint plugins                                                          |
+| prettier              | An opinionated code formatter                                           |
+| pretty-format         | Stringify any JavaScript value for prettier                             |
+| start-server-and-test | Runs and waits server before testing                                    |
+| ts-jest               | A preprocessor with sourcemap support to help use TypeScript with Jest. |
+| ts-node               | Enables directly running TS files.                                      |
+| typescript            | JavaScript compiler/type checker that boosts JavaScript productivity    |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Issues
+1. Jest RANDOMBYTESREQUEST error in local machine please see [here](https://stackoverflow.com/questions/65653226/jest-and-randombytesrequest-open-handles)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
+Copyright (c) keithics. All rights reserved.
