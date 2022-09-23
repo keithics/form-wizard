@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculating Premiums AU premium for 10years old  Should be 300 for regular 1`] = `"300.00"`;
+
+exports[`Calculating Premiums AU premium for 10years old  Should be 450 for sale 1`] = `"450.00"`;
+
+exports[`Calculating Premiums AU premium for 10years old  Should be 525 for super safe 1`] = `"525.00"`;
+
+exports[`Calculating Premiums Addons AU Addons for 10years old  Should be 0 for regular 1`] = `""`;
+
+exports[`Calculating Premiums Addons AU Addons for 10years old  Should be 150 for sale 1`] = `"+(150.00 AUD, 50%)"`;
+
+exports[`Calculating Premiums Addons AU Addons for 10years old  Should be 225 for super safe 1`] = `"+(225.00 AUD, 75%)"`;
+
+exports[`Calculating Premiums Addons HK Addons for 10years old  Should be 0 for regular 1`] = `""`;
+
+exports[`Calculating Premiums Addons HK Addons for 10years old  Should be 50 for sale 1`] = `"+(50.00 HKD, 50%)"`;
+
+exports[`Calculating Premiums Addons HK Addons for 10years old  Should be 75 for super safe 1`] = `"+(75.00 HKD, 75%)"`;
+
+exports[`Calculating Premiums Addons US Addons for 10years old  Should be 0 for regular 1`] = `""`;
+
+exports[`Calculating Premiums Addons US Addons for 10years old  Should be 100 for sale 1`] = `"+(100.00 USD, 50%)"`;
+
+exports[`Calculating Premiums Addons US Addons for 10years old  Should be 150 for super safe 1`] = `"+(150.00 USD, 75%)"`;
+
+exports[`Calculating Premiums HK premium for 10years old  Should be 100 for regular 1`] = `"100.00"`;
+
+exports[`Calculating Premiums HK premium for 10years old  Should be 150 for sale 1`] = `"150.00"`;
+
+exports[`Calculating Premiums HK premium for 10years old  Should be 175 for super safe 1`] = `"175.00"`;
+
+exports[`Calculating Premiums US premium for 10years old  Should be 200 for regular 1`] = `"200.00"`;
+
+exports[`Calculating Premiums US premium for 10years old  Should be 300 for sale 1`] = `"300.00"`;
+
+exports[`Calculating Premiums US premium for 10years old  Should be 350 for super safe 1`] = `"350.00"`;

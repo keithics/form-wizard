@@ -1,0 +1,5 @@
+1. cleanup package.json
+2. add e2e
+3. unit tests
+4. clean css , @apply
+5. error handler , errorElement
