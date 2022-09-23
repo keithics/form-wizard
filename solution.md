@@ -2,7 +2,37 @@
 
 > Simple but robust and fully tested React Application. Complete with unit testing as well as E2E.
 
-## DEMO 
+> TLDR; more of the tech specs and definitions is in readme.md file, because this is shown by default in github or other git providers.
+
+### Approach
+Built in React since this the framework that I am quite familiar with. 
+I am keeping it as simple as I can without any help from any UI libraries or any states.
+
+Each common components are separated inside `components` directory. Check `readme.md` file to see the file structure.
+
+### CRA vs VITE?
+I am still using CRA because I don't think vite is currently supporting eslint on run-time during development.
+This is the biggest reason why I am still using CRA, will probably move to Vite once all linting and formatting can be done during build and run time.
+
+### State Management
+This app is too small to use Context or Redux.
+
+### Minimal Props
+As much as possible, I am minimizing passing of props to have a loose component
+
+### Why not Nextjs?
+NextJs is great and all but again, this app is too small. Using it will be an overkill.
+
+### User Experience
+1. Hitting the back button in summary page will retain the previous values, this is simply done using query parameters to keep it as simple as much as possible.
+2. Form validations - although IRL this should be done in the backend as well - client form validation is also performed to enhanced the UX.
+
+### Testing
+1. Most if not all scenarious is in the E2E test using cypress `npm test`
+2. Unit tests are done using Jest/Snapshots which I am a great fan :) `npm run jest`
+
+
+## DEMO
 [LIVE DEMO HERE](https://keithics-form-wizard.netlify.app/)
 
 ![DEMO](./demo.gif)
@@ -100,3 +130,4 @@ In that file you'll find two sections:
 
 ## License
 Copyright (c) keithics. All rights reserved.
+
