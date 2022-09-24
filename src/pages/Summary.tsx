@@ -4,8 +4,8 @@ import { countries, ICountry } from 'data/countries';
 import { packages } from 'data/packages';
 import { getParams } from 'lib/helpers';
 import { calculatePremium, DefaultKeys, getData } from 'lib/insurance.helpers';
-import React, { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Summary() {
   const params = getParams();
@@ -17,12 +17,12 @@ export default function Summary() {
   const userAge = age || 0;
   const totalPremium = calculatePremium(countryData.rate, premiumData.percentageAddOn, userAge as number);
 
-  useEffect(()=>{
+  useEffect(() => {
     // if user goes to this page directly, redirect to 404
-    if(Object.keys(params).length != 4){
-      navigate('/not-found')
+    if (Object.keys(params).length != 4) {
+      navigate('/not-found');
     }
-  })
+  });
   return (
     <Card>
       <div>

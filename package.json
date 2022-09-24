@@ -15,7 +15,7 @@
     "build": "react-scripts build",
     "jest": "NODE_PATH=./src jest",
     "cypress": "start-server-and-test start http://localhost:3000 cypress:run",
-    "test": "npm run pretty && npm run lint && npm run jest && npm run cypress",
+    "test": "npm run lint && npm run jest && npm run cypress",
     "eject": "react-scripts eject",
     "pretty": "npx prettier --write ./src",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx && npx prettier --check ./src && tsc --noEmit",
