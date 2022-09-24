@@ -1,0 +1,47 @@
+name: CI
+
+# 1
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push events but only for the master branch
+  push:
+    # branches-ignore:
+    branches:
+      - '*'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Image version'
+        required: true
+
+#3
+jobs:
+  linting:
+    name: 'Linting'
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: 'Checkout Code'
+        uses: 'actions/checkout@v2'
+
+      - name: 'Lint code'
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+        run: |
+          npm ci
+          npm run lint
+  testing:
+    name: 'Automated Tests'
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: 'Checkout Code'
+        uses: 'actions/checkout@v2'
+
+      - name: 'Run unit tests'
+        env:
+          MONGO_URL_TEST: ${{ secrets.MONGO_URL_TEST }}
+        run: |
+          npm ci
+          npm run test
+
