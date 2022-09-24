@@ -31,7 +31,7 @@ h3 {
 }
 
 .labels-radio {
-  @apply ml-3 block text-sm font-medium text-gray-700;
+  @apply ml-3 block text-sm font-medium text-gray-700 cursor-pointer;
 }
 
 .form-errors {

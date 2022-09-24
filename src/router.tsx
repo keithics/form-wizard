@@ -1,4 +1,5 @@
 import ErrorPage from 'pages/errors/Error';
+import Error404Page from "pages/errors/Error404";
 import InvalidAge from 'pages/InvalidAge';
 import Root from 'pages/Root';
 import Start from 'pages/Start';
@@ -30,4 +31,8 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path:'*',
+    element: <Error404Page />
+  }
 ]);

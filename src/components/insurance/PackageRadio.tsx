@@ -20,11 +20,12 @@ function PackageRadio({ name, values, required }: Omit<ISelect<IPackageValues>, 
             <input
               {...register(name, { required })}
               type="radio"
+              id={v.name}
               defaultValue={v.value}
               className="input-radio"
               defaultChecked={v.isDefault}
             />
-            <label htmlFor={v.value} className="labels-radio">
+            <label htmlFor={v.name} className="labels-radio">
               {v.name} <AddOnPremium control={control} packageData={v} age={age} />
             </label>
           </div>

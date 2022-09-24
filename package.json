@@ -14,12 +14,14 @@
     "start": "NODE_PATH=./src  react-scripts start",
     "build": "react-scripts build",
     "jest": "NODE_PATH=./src jest",
-    "test": "start-server-and-test start http://localhost:3000 cypress:run",
+    "cypress": "start-server-and-test start http://localhost:3000 cypress:run",
+    "test": "npm run pretty && npm run lint && npm run jest && npm run cypress",
     "eject": "react-scripts eject",
     "pretty": "npx prettier --write ./src",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx && npx prettier --check ./src && tsc --noEmit",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +56,7 @@
     "autoprefixer": "^10.4.12",
     "cypress": "^10.8.0",
     "eslint": "8.22.0",
+    "husky": "^8.0.1",
     "jest": "^28.1.2",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
