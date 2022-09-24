@@ -50,7 +50,7 @@ export default function Start() {
             <Input register={register} label="Name" name="name" required={true} />
 
             <Input register={register} label="Age" name="age" type={TextInputTypes.Number} required={true} min={0} />
-            <Select register={register} values={countries} label="Where do you life" name="country" required={true} />
+            <Select register={register} values={countries} label="Where do you live" name="country" required={true} />
             <div>
               <PackageRadio values={packages} label="" name="premium" required={true} />
               <TotalPremium control={control} />
