@@ -8,6 +8,22 @@
 Built in React since this the framework that I am quite familiar with. 
 I am keeping it as simple as I can without any help from any UI libraries or any states.
 
+[LIVE DEMO HERE](https://keithics-form-wizard.netlify.app/)
+
+### Features
+- ✅ Less than 100 kb
+- ✅ modular code organization
+- ✅ Form validations (demo only, should have backend validations IRL)
+- ✅ E2E tests `npm run test`
+- ✅ Unit testing with snapshots `npm run jest`
+- ✅ Proper error handling and 404 routes
+- ✅ Automated pre-commit hooks
+- ✅ Automated code formatting `npm run pretty`
+- ✅ Automated code linting `npm run lint`
+- ✅ Continuous Integration with Github Actions
+- ✅ Continuous Deployment with Netlify
+
+
 Each common components are separated inside `components` directory. Check `readme.md` file to see the file structure.
 
 ### CRA vs VITE?

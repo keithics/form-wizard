@@ -2,6 +2,20 @@
 
 > Simple but robust and fully tested React Application. Complete with unit testing as well as E2E.
 
+### Features
+- ✅ Less than 100 kb
+- ✅ modular code organization
+- ✅ Form validations (demo only, should have backend validations IRL)
+- ✅ E2E tests `npm run test`
+- ✅ Unit testing with snapshots `npm run jest`
+- ✅ Proper error handling and 404 routes
+- ✅ Automated pre-commit hooks
+- ✅ Automated code formatting `npm run pretty`
+- ✅ Automated code linting `npm run lint`
+- ✅ Continuous Integration with Github Actions
+- ✅ Continuous Deployment with Netlify
+
+
 ## DEMO 
 [LIVE DEMO HERE](https://keithics-form-wizard.netlify.app/)
 
